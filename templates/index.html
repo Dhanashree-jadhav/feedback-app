@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Collector</title>
+</head>
+<body>
+    <h1>Submit Your Feedback</h1>
+    <form method="POST">
+        <textarea name="feedback" rows="4" cols="50" required></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Previous Feedbacks:</h2>
+    <ul>
+        {% for fb in feedback_list %}
+            <li>{{ fb }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
